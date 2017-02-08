@@ -13,7 +13,7 @@
 }
 .section {
   margin: 0;
-  padding: 1rem;
+
   background-image: url('http://media.istockphoto.com/photos/abstract-blue-background-picture-id478985058?k=6&m=478985058&s=170667a&w=0&h=OVed_5p0yljMLKlsJikpoWAwRLb3V2r6_C0ualmOfrw=');
   background-size: cover;
 }
@@ -90,7 +90,22 @@
   opacity: .5;
 }
 
+.section__main {
+  margin: 0;
+  margin-top: 3rem;
+}
+
 .container__main {
   max-width: 65rem;
   margin: auto;
+  display: flex;
+
+}
+
+.article__left {
+
+}
+
+.article__right {
+
 }
