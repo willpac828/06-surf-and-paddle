@@ -7,13 +7,21 @@
 // @import 'section';
 // @import 'top';
 
+$c-primary: #2f73c2;
+$c-secondary: #2381b5;
+$c-aside: #49d6df;
+$c-section-border: #eee;
+$c-white: #fff;
+$c-black: #383633;
+$c-grey-text: #c6c8c6;
+
 body {
   margin: 0;
 }
 
 ul {
-  list-style: none;
   padding-left: 0;
+  list-style: none;
 }
 
 img {
@@ -21,13 +29,13 @@ img {
 }
 
 * {
+  font-family: 'Open Sans Condensed', sans-serif;
   box-sizing: border-box;
   // border: 1px solid black;
-  font-family: 'Open Sans Condensed', sans-serif;
 }
+
 .section {
   margin: 0;
-
 
 }
 
@@ -45,23 +53,24 @@ img {
 
 .top-nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
+  &__left {
+    margin: 0;
+    font-family: sans-serif;
+
+  }
+
+  &__right {
+    font-family: sans-serif;
+  }
 }
 
-.top-nav__left {
-
-  margin: 0;
-  font-family: sans-serif;
-}
-
-.top-nav__left img {
+.wave-img {
   width: 3rem;
   height: 3rem;
-  // background-color: red;
   padding: 0.5rem;
-
 }
 
 .wave-text {
@@ -74,23 +83,15 @@ img {
   vertical-align: middle;
 }
 
-.top-nav__left p {
-
-}
-
-.top-nav__right {
-  font-family: sans-serif;
-}
-
 .nav-list {
   display: flex;
   justify-content: space-between;
   width: 10rem;
   padding-left: 0;
-}
 
-.nav-list__item {
-  display: inline;
+  &__item {
+    display: inline;
+}
 }
 
 .hero {
@@ -98,7 +99,7 @@ img {
 }
 
 .hero h1 {
-  color: #383633;
+  color: $c-black;
   text-align: center;
   font-size: 8rem;
   margin: 0;
@@ -110,7 +111,7 @@ img {
   font-size: 1rem;
   text-align: center;
   margin: 0;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .section__main {
@@ -126,20 +127,20 @@ img {
 }
 
 .article__left {
-  width:68%;
+  width: 68%;
   padding-right: 3rem;
 }
 
 .article__headline {
   font-size: 5rem;
-  margin: 0;
+  padding: 3rem 0;
+  color: $c-primary;
+  border-top: 1px solid $c-section-border;
   line-height: 5rem;
-  color: #060a54;
   text-transform: uppercase;
   text-align: center;
-  padding: 3rem 0;
-  border-top: 1px solid #eee;
-  }
+  margin: 0;
+}
 
 .article__info {
   display: flex;
@@ -159,14 +160,14 @@ img {
 
 .article__author {
   margin-top: 1rem;
-  color: #2f73c2;
+  color: $c-primary;
   display: flex;
   // random flex box?^^^
-  margin: 0 .3rem;
+  margin: 0 0.3rem;
 }
 
 .grey-text {
-  color: #c6c8c6;
+  color: $c-grey-text;
   float: right;
 }
 
@@ -174,9 +175,6 @@ img {
   text-decoration: underline;
 
 }
-
-
-
 
 .article__data span {
   text-decoration: underline;
@@ -193,20 +191,20 @@ img {
 
 .aside {
   font-size: 2.5rem;
-  color: #49d6df;
+  color: $c-aside;
   padding-left: 1rem;
-  border-left: 2px solid grey;
+  border-left: 2px solid $c-grey-text;
   margin: 1rem;
 }
 
 .main__span-1 {
   text-decoration: underline;
-  color: lightgrey;
+  color: $c-grey-text;
 }
 
 .main__span-2 {
   text-decoration: underline;
-  color: #2381b5;
+  color: $c-secondary;
 }
 
 .side-box {
@@ -229,7 +227,7 @@ img {
   margin: 0;
   text-align: center;
   font-size: 1.25rem;
-  color: navy;
+  color: $c-primary;
   font-weight: 600;
 }
 
@@ -244,14 +242,13 @@ img {
   }
 
   > * + * {
-    border-left-color: grey;
+    border-left-color: $c-section-border;
   }
 
 }
 
-
 .social__link {
-  color: grey;
+  color: $c-section-border;
 }
 
 .side-ad {
@@ -260,18 +257,18 @@ img {
 
 .side-ad__info {
   float: right;
-  color: lightgrey;
+  color: $c-grey-text;
 
 }
 
 .side__article-heading {
-  color: #49d6df;
+  color: $c-secondary;
   margin-top: 0;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
-.side__article-text  {
-  color: lightgrey;
+.side__article-text {
+  color: $c-grey-text;
   margin: 0;
 }
 
@@ -290,8 +287,9 @@ img {
     font-size: 3rem;
     position: absolute;
     bottom: 0;
+    left: 1rem;
     margin: 0;
-    color: white;
+    color: $c-white;
   }
 }
 
@@ -299,11 +297,30 @@ img {
   flex-basis: calc(100% / 4);
   position: relative;
 
-    &-pic {
+  &-pic {
     height: 100%;
+  }
 }
-    }
 
 footer {
-  background: #161742;
+  background: $c-primary;
+  margin: 0;
+}
+
+.baseline {
+  max-width: 60rem;
+  margin: auto;
+  color: $c-white;
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    display: flex;
+  }
+
+  &__logo {
+    height: 4rem;
+    width: 4rem;
+
+  }
 }
