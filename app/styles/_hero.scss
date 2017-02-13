@@ -1,0 +1,20 @@
+$c-black: #383633;
+
+.hero {
+  padding-bottom: 4rem;
+
+  &__title {
+    margin: 0;
+    color: $c-black;
+    font-size: 8rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0.5;
+  }
+}

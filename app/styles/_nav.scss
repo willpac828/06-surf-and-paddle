@@ -1,0 +1,42 @@
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__left {
+    margin: 0;
+    font-family: sans-serif;
+
+  }
+
+  &__right {
+    font-family: sans-serif;
+  }
+}
+
+.wave-img {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+}
+
+.wave-text {
+  margin: 0;
+}
+
+.wave {
+  width: 5rem;
+  height: 5rem;
+  vertical-align: middle;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+  padding-left: 0;
+
+  &__item {
+    display: inline;
+}
+}
