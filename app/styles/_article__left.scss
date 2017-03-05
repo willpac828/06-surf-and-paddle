@@ -4,6 +4,8 @@ $c-primary: #2f73c2;
 $c-grey-text: #c6c8c6;
 $c-aside: #49d6df;
 $c-secondary: #2381b5;
+$c-white: #fff;
+$c-navy: #1c1745;
 
 .article__left {
   width: 68%;
@@ -76,4 +78,35 @@ $c-secondary: #2381b5;
 .main__span-2 {
   color: $c-secondary;
   text-decoration: underline;
+}
+
+.button-bar {
+  display: flex;
+
+  > * + * {
+    margin-left: 1rem;
+  }
+
+  &__btn {
+    padding: 0.25rem;
+    background-color: $c-grey-text;
+    color: $c-white;
+  }
+}
+
+.blue {
+  background-color: $c-primary;
+}
+
+.dark {
+  background-color: $c-dark-grey;
+}
+
+.fa {
+  margin-right: 0.25rem;
+  margin-left: -0.25rem;
+}
+
+.navy {
+  background-color: $c-navy;
 }
