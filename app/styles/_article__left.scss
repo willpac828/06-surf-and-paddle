@@ -80,33 +80,48 @@ $c-navy: #1c1745;
   text-decoration: underline;
 }
 
+// button stuff
+
 .button-bar {
   display: flex;
+}
 
-  > * + * {
-    margin-left: 1rem;
+.button {
+  display: flex;
+  align-items: center;
+  margin: 0 0.5rem;
+  padding: 0;
+  border: 0;
+
+
+  &-icon--grey {
+    padding: 0.4rem;
+    background-color: $c-dark-grey;
+    color: $c-white;
+    line-height: 1.5rem;
   }
 
-  &__btn {
-    padding: 0.25rem;
+  &-text--grey {
+    padding: 0.4rem;
     background-color: $c-grey-text;
     color: $c-white;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
-}
 
-.blue {
-  background-color: $c-primary;
-}
+  &-icon--blue {
+    padding: 0.4rem;
+    background-color: $c-primary;
+    color: $c-white;
+    line-height: 1.5rem;
+  }
 
-.dark {
-  background-color: $c-dark-grey;
-}
+  &-text--blue {
+    padding: 0.4rem;
+    background-color: $c-aside;
+    color: $c-white;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 
-.fa {
-  margin-right: 0.25rem;
-  margin-left: -0.25rem;
-}
-
-.navy {
-  background-color: $c-navy;
 }
